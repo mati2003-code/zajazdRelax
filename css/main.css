@@ -147,43 +147,32 @@ p {
   }
 }
 
-.btn {
-  display: inline-block;
-  width: 200px;
+.blackout {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.nav {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nav__item {
+  font-size: 2rem;
+  font-style: italic;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav__item {
+    display: inline-block;
+  }
+}
+.nav__link {
+  display: flex;
   color: #eff0f3;
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
-  border: none;
+  padding: 10px;
   border-radius: 0.4rem;
-  padding: 1.5rem;
+  transition-duration: 0.5s;
 }
-.btn--red {
+.nav__link:hover {
   background-color: #74030e;
-}
-.btn--red:hover {
-  background-color: #68030d;
-}
-.btn--green {
-  background-color: #132601;
-}
-.btn--green:hover {
-  background-color: #0d1b01;
-}
-.btn--outline {
-  background-color: transparent;
-  border: 1px solid #eff0f3;
-  font-family: inherit;
-}
-.btn--outline:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.btn--circle {
-  border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
-  line-height: 10rem;
-  padding: 0;
 }
 
 .heading--h1 {
@@ -207,8 +196,46 @@ p {
   text-align: center;
 }
 
-.blackout {
-  background-color: rgba(0, 0, 0, 0.55);
+.btn {
+  display: inline-block;
+  width: 200px;
+  color: #eff0f3;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 1.5rem;
+  transition-duration: 0.5s;
+}
+.btn--menu {
+  background-color: transparent;
+  border: 1px solid #eff0f3;
+}
+.btn--menu:hover {
+  background-color: #eff0f3;
+  color: #132601;
+}
+.btn--green {
+  background-color: #132601;
+}
+.btn--green:hover {
+  background-color: #0d1b01;
+}
+.btn--outline {
+  background-color: transparent;
+  border: 1px solid #eff0f3;
+  font-family: inherit;
+}
+.btn--outline:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.btn--circle {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  line-height: 10rem;
+  padding: 0;
 }
 
 .site-header {
@@ -219,6 +246,12 @@ p {
 .site-header__blackout {
   position: absolute;
   height: 100%;
+  width: 100%;
+}
+.site-header__nav {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
   width: 100%;
 }
 .site-header__h1 {
