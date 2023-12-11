@@ -77,4 +77,74 @@ p {
   margin-top: 15px;
 }
 
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 740px;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .container {
+    max-width: 1120px;
+  }
+}
+
+.column {
+  width: 100%;
+  padding: 0 15px 15px 15px;
+}
+@media screen and (min-width: 768px) {
+  .column--md50 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .column--md33 {
+    flex: 0 0 33.3333333%;
+    max-width: 33.3333333%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .column--md25 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .column--lg50 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .column--lg33 {
+    flex: 0 0 33.3333333%;
+    max-width: 33.3333333%;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .column--lg25 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 15px;
+}
+@media screen and (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
