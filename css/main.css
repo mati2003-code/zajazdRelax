@@ -58,6 +58,7 @@ table {
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -141,11 +142,6 @@ p {
   margin: 0;
   padding: 15px;
 }
-@media screen and (min-width: 768px) {
-  .row {
-    flex-direction: row;
-  }
-}
 
 .blackout {
   background-color: rgba(0, 0, 0, 0.55);
@@ -192,6 +188,7 @@ p {
 }
 .heading--h2 {
   font-size: 5rem;
+  font-style: italic;
   width: 100%;
   text-align: center;
 }
@@ -266,6 +263,18 @@ p {
   left: 0;
   right: 0;
   margin: 0 auto;
+}
+
+.site-section {
+  min-height: 70vh;
+  padding-top: 30px;
+}
+.site-section--bg-color {
+  background-color: #3a3429;
+}
+
+.text-color-white {
+  color: #eff0f3;
 }
 
 /*# sourceMappingURL=main.css.map */
