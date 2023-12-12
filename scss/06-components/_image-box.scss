@@ -1,11 +1,13 @@
 @use '../02-tools/' as *;
+@use '../04-elements/' as*;
 
 .image-box {
   border-radius: .6rem;
   box-shadow: 0px 0px 15px gray;
   cursor: pointer;
-
+  
   &:hover {
+    animation: scalePicture 0.3s linear forwards;
     box-shadow: 0 0 25px gray;
   }
 
@@ -47,6 +49,32 @@
     }
     &--dancehole-4 {
       background: url(../../assets/img/dancehole-4.jpg) center/cover;
+    }
+
+    &--restaurant-1 {
+      background: url(../../assets/img/restaurant-1.jpg) center/cover;
+    }
+    &--restaurant-2 {
+      background: url(../../assets/img/restaurant-2.webp) center/cover;
+    }
+    &--restaurant-3 {
+      background: url(../../assets/img/restaurant-3.webp) center/cover;
+    }
+    &--restaurant-4 {
+      background: url(../../assets/img/restaurant-4.webp) center/cover;
+    }
+
+    &--room-1 {
+      background: url(../../assets/img/room-1.webp) center/cover;
+    }
+    &--room-2 {
+      background: url(../../assets/img/room-2.webp) center/cover;
+    }
+    &--room-3 {
+      background: url(../../assets/img/room-3.webp) center/cover;
+    }
+    &--room-4 {
+      background: url(../../assets/img/room-4.webp) center/cover;
     }
 
     @include medium {
