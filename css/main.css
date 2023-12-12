@@ -63,6 +63,8 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 a {
