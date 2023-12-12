@@ -5,6 +5,7 @@
   padding-top: $grid-base * 3;
 
   &--bg-color {
-    background-color: $color-bg-section;
+    background: $color-bg-section;
+    min-height: 40vh;
   } 
 }
