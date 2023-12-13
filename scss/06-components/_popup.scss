@@ -1,0 +1,54 @@
+@use '../01-settings/' as *;
+@use '../02-tools/' as *;
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+
+
+  
+  &__image {
+    
+
+    @include medium{
+      width: 700px;
+      height: 500px;
+    }
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &__close {
+    position: fixed;
+    right: 32px;
+    top: 32px;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: $color-white;
+    border: 1px solid $color-white;
+    transition: 0.5s linear;
+    cursor: pointer;
+
+    @include medium {
+      font-size: 40px;
+      padding: 10px 20px;
+    }
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-green;
+      border: none;
+    }
+  }
+}

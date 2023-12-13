@@ -28,6 +28,31 @@ const menuSettings = () => {
 
 document.addEventListener("DOMContentLoaded", menuSettings);
 
+const imageBoxImage = document.querySelectorAll(".image-box__image");
+const popUp = document.querySelector(".popup");
+const popUpClose = document.querySelector(".popup__close");
+
+imageBoxImage.forEach((img) => {
+  img.addEventListener('click' , (e) => {
+    hamburgerMenuButton.classList.add("display-none");
+    popUp.classList.remove("animation-disappear");
+    popUp.classList.remove("popup--hidden");
+    popUp.classList.add("animation-appear");
+  });
+});
+
+popUpClose.addEventListener('click', () => {
+  hamburgerMenuButton.classList.remove("display-none");
+  popUp.classList.add("animation-disappear");
+  setTimeout(() => {
+    popUp.classList.add("popup--hidden");
+  }, 500);  
+});
+
+
+
+
+
 
 
 
