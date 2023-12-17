@@ -419,7 +419,13 @@ p {
 }
 
 .site-header {
-  background: url(../assets/img/bg-header.webp) center/cover fixed;
+  background-image: url(../assets/img/bg-header.webp);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -webkit-background-position: center;
+  -webkit-background-attachment: fixed;
   height: 100vh;
   position: relative;
 }
