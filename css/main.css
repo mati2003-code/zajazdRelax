@@ -411,12 +411,12 @@ p {
   padding-top: 30px;
 }
 .site-section--bg-color {
-  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(166, 85, 159) 60%);
+  background: radial-gradient(circle, rgb(159, 126, 159) 80%, rgb(255, 255, 255) 100%, rgb(255, 255, 255) 44%);
   min-height: 40vh;
 }
 
 .site-footer {
-  background: linear-gradient(90deg, rgb(67, 70, 65) 0%, rgb(50, 91, 99) 53%);
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(108, 124, 183) 14%);
   color: #eff0f3;
 }
 
@@ -448,8 +448,8 @@ p {
   color: green;
 }
 
-.text-color-red {
-  color: rgb(4, 166, 4);
+.text-color-blue {
+  color: rgba(0, 0, 0, 0.76);
 }
 
 .text-font-large {

@@ -1,8 +1,8 @@
 $color-white: #eff0f3;
 $color-red: #74030e;
 $color-green: #132601; 
-$color-bg-section: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(166,85,159,1) 60%);
-$color-bg-footer: linear-gradient(90deg, rgba(67,70,65,1) 0%, rgba(50,91,99,1) 53%);
+$color-bg-section: radial-gradient(circle, rgb(159, 126, 159) 80%, rgb(255, 255, 255) 100%, rgb(255, 255, 255) 44%);
+$color-bg-footer: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(108,124,183,1) 14%);
 
 $font-base: 10px;
 
