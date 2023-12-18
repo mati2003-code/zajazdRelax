@@ -1,15 +1,17 @@
 @use '../01-settings/' as *;
+@use '../02-tools/' as *;
 
 .site-header {
   background-image: url(../assets/img/bg-header.webp) ;
-  background-position: center;
   background-size: cover;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -webkit-background-position: center;
-  -webkit-background-attachment: fixed;
+  background-position: center;
+  // background-attachment: fixed;
   height: 100vh;
   position: relative;
+
+  @include medium {
+    background-attachment: fixed;
+  }
 
   &__blackout {
     position: absolute;
