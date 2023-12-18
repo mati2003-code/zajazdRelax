@@ -63,8 +63,6 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 a {
@@ -421,11 +419,14 @@ p {
 }
 
 .site-menu {
-  display: none;
   position: absolute;
   top: 0;
+  left: -100%;
+  margin: 0;
+  padding: 0;
   z-index: 1;
   background-color: rgba(192, 189, 189, 0.768627451);
+  transition: 0.5s ease;
 }
 @media screen and (min-width: 768px) {
   .site-menu {
@@ -470,6 +471,10 @@ p {
 
 .animation-disappear {
   animation: disappear 0.5s linear forwards;
+}
+
+.active {
+  transform: translateX(100%);
 }
 
 /*# sourceMappingURL=main.css.map */

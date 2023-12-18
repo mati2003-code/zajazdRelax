@@ -2,11 +2,14 @@
 @use '../02-tools/' as *;
 
 .site-menu {
-  display: none;
   position: absolute;
   top: 0;
+  left: -100%;
+  margin: 0;
+  padding: 0;
   z-index: 1;
   background-color: #c0bdbdc4;
+  transition: 0.5s ease;
 
   @include medium {
     display: none;
