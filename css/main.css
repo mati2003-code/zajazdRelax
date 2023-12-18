@@ -280,65 +280,12 @@ p {
   box-shadow: 0 0 25px gray;
 }
 .image-box__image {
-  background: url(../assets/img/menu-2.jpg) center/cover;
+  background: center/cover;
   height: 22rem;
+  width: 100%;
   display: block;
   border-top-left-radius: 0.6rem;
   border-top-right-radius: 0.6rem;
-}
-.image-box__image--2nd {
-  background: url(../assets/img/menu-3.jpg) center/cover;
-}
-.image-box__image--3rd {
-  background: url(../assets/img/menu-4.jpg) center/cover;
-}
-.image-box__image--4th {
-  background: url(../assets/img/menu-5.jpg) center/cover;
-}
-.image-box__image--5th {
-  background: url(../assets/img/menu-6.webp) center/cover;
-}
-.image-box__image--6th {
-  background: url(../assets/img/menu-7.jpg) center/cover;
-}
-.image-box__image--7th {
-  background: url(../assets/img/menu-8.jpg) center/cover;
-}
-.image-box__image--dancehole-1 {
-  background: url(../assets/img/dancehole-1.jpg) center/cover;
-}
-.image-box__image--dancehole-2 {
-  background: url(../assets/img/dancehole-2.jpg) center/cover;
-}
-.image-box__image--dancehole-3 {
-  background: url(../assets/img/dancehole-3.jpg) center/cover;
-}
-.image-box__image--dancehole-4 {
-  background: url(../assets/img/dancehole-4.jpg) center/cover;
-}
-.image-box__image--restaurant-1 {
-  background: url(../assets/img/restaurant-1.jpg) center/cover;
-}
-.image-box__image--restaurant-2 {
-  background: url(../assets/img/restaurant-2.webp) center/cover;
-}
-.image-box__image--restaurant-3 {
-  background: url(../assets/img/restaurant-3.webp) center/cover;
-}
-.image-box__image--restaurant-4 {
-  background: url(../assets/img/restaurant-4.webp) center/cover;
-}
-.image-box__image--room-1 {
-  background: url(../assets/img/room-1.webp) center/cover;
-}
-.image-box__image--room-2 {
-  background: url(../assets/img/room-2.webp) center/cover;
-}
-.image-box__image--room-3 {
-  background: url(../assets/img/room-3.webp) center/cover;
-}
-.image-box__image--room-4 {
-  background: url(../assets/img/room-4.webp) center/cover;
 }
 @media screen and (min-width: 768px) {
   .image-box__image {
@@ -384,6 +331,11 @@ p {
   background-color: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+.popup__image {
+  width: 100%;
+  height: 40%;
+  padding: 10px;
 }
 @media screen and (min-width: 768px) {
   .popup__image {
