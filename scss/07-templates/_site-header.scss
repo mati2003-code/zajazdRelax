@@ -7,7 +7,7 @@
   width: 100vw;
   position: relative;
 
-  @include medium {
+  @include large {
     background-attachment: fixed;
   }
 
