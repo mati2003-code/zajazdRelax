@@ -23,29 +23,34 @@ const popUpImage = document.querySelector(".popup__image")
 
 imageBoxImage.forEach((img) => {
   img.addEventListener('click' , (e) => {
-    scrollToTopIcon.classList.remove("display-block");
+    scrollToTopIcon.classList.add("animation-disappear");
+    setTimeout(() => {
+      scrollToTopIcon.classList.remove("display-block");
+    }, 500);
     hamburgerMenuButton.classList.add("display-none");
     popUp.classList.remove("animation-disappear");
     popUp.classList.remove("popup--hidden");
     popUp.classList.add("animation-appear");
     popUpImage.src = e.target.src;
   });
-
   popUp.addEventListener("click", () => {
-    scrollToTopIcon.classList.add("display-block");
+    scrollToTopIcon.classList.remove("animation-disappear");
+    scrollToTopIcon.classList.add("animation-appear");
+    setTimeout(() => {
+      scrollToTopIcon.classList.add("display-block");
+    }, 500); 
     hamburgerMenuButton.classList.remove("display-none");
     popUp.classList.remove("animation-appear");
     popUp.classList.add("animation-disappear");
     setTimeout(() => {
       popUp.classList.add("popup--hidden");
     }, 500);
-  })
+  });
 });
 
-popUpClose.addEventListener('click', () => {
-  // scrollToTopIcon.classList.add("display-block");
-  
-  popUp.classList.add("animation-disappear");
+popUpClose.addEventListener('click', () => {  
+  popUp.classList.remove("animation-disappear");
+  popUp.classList.add("animation-appear");
   setTimeout(() => {
     popUp.classList.add("popup--hidden");
   }, 500);  

@@ -279,9 +279,11 @@ p {
   cursor: pointer;
   transition: transform 0.5s linear;
 }
-.image-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px gray;
+@media screen and (min-width: 1240px) {
+  .image-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px gray;
+  }
 }
 .image-box__image {
   background: center/cover;

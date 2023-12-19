@@ -1,5 +1,6 @@
 @use '../02-tools/' as *;
-@use '../04-elements/' as*;
+@use '../04-elements/' as *;
+@use '../02-tools/' as *;
 
 .image-box {
   border-radius: .6rem;
@@ -7,11 +8,14 @@
   transform: scale(1);
   cursor: pointer;
   transition: transform 0.5s linear;
-  
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px gray;
+
+  @include large {
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px gray;
+    }
   }
+  
 
   &__image {
     background: center/cover;
