@@ -5,13 +5,29 @@
   display: block;
   position: absolute;
   color: $color-white;
-  left: 20px;
-  top: 20px;
   font-size: 2.5rem;
   z-index: 2;
   cursor: pointer;
 
+  
+
+}
+.fa-bars {
+  left: 20px;
+  top: 20px;
+
   @include medium {
     display: none;
   }
+}
+
+.fa-chevron-up {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.517);
+  padding: 10px 10px;
+  font-size: 3rem;
+  border-radius: 8px;
 }

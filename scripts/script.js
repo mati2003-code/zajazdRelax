@@ -23,6 +23,7 @@ const popUpImage = document.querySelector(".popup__image")
 
 imageBoxImage.forEach((img) => {
   img.addEventListener('click' , (e) => {
+    scrollToTopIcon.classList.remove("display-block");
     hamburgerMenuButton.classList.add("display-none");
     popUp.classList.remove("animation-disappear");
     popUp.classList.remove("popup--hidden");
@@ -32,6 +33,7 @@ imageBoxImage.forEach((img) => {
 });
 
 popUpClose.addEventListener('click', () => {
+  scrollToTopIcon.classList.add("display-block");
   hamburgerMenuButton.classList.remove("display-none");
   popUp.classList.add("animation-disappear");
   setTimeout(() => {
@@ -39,7 +41,30 @@ popUpClose.addEventListener('click', () => {
   }, 500);  
 });
 
+const scrollToTopIcon = document.querySelector(".fa-chevron-up");
 
+scrollToTopIcon.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+window.addEventListener("scroll", () => {
+  const headerHeight = document.querySelector('.site-header').offsetHeight;
+
+  if (window.scrollY > headerHeight - 10) {
+    scrollToTopIcon.classList.remove("animation-disappear");
+    scrollToTopIcon.classList.add("animation-appear");
+    setTimeout(() => {
+      scrollToTopIcon.classList.add("display-block");
+    }, 500);
+  }  else {
+      scrollToTopIcon.classList.remove("animation-appear");
+      scrollToTopIcon.classList.add("animation-disappear");
+      setTimeout(() => {
+        scrollToTopIcon.classList.remove("display-block");
+      }, 500);
+    }
+})
 
 
 

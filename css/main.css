@@ -240,9 +240,15 @@ p {
   background-color: transparent;
   border: 1px solid #eff0f3;
 }
-.btn--menu:hover {
+.btn--menu:active, .btn--menu:focus {
   background-color: #eff0f3;
   color: #132601;
+}
+@media screen and (min-width: 1240px) {
+  .btn--menu:hover {
+    background-color: #eff0f3;
+    color: #132601;
+  }
 }
 .btn--green {
   background-color: #132601;
@@ -305,16 +311,30 @@ p {
   display: block;
   position: absolute;
   color: #eff0f3;
-  left: 20px;
-  top: 20px;
   font-size: 2.5rem;
   z-index: 2;
   cursor: pointer;
 }
+
+.fa-bars {
+  left: 20px;
+  top: 20px;
+}
 @media screen and (min-width: 768px) {
-  .fa-solid {
+  .fa-bars {
     display: none;
   }
+}
+
+.fa-chevron-up {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.517);
+  padding: 10px 10px;
+  font-size: 3rem;
+  border-radius: 8px;
 }
 
 .popup {
@@ -414,7 +434,7 @@ p {
 }
 
 .site-footer {
-  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(108, 124, 183) 14%);
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(108, 124, 183) 5%);
   color: #eff0f3;
 }
 

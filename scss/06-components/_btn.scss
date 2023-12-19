@@ -18,9 +18,16 @@
     background-color: transparent;
     border: 1px solid $color-white;
 
-    &:hover {
+    &:active, &:focus {
       background-color: $color-white;
       color: $color-green;
+    }
+
+    @include large {
+      &:hover {
+        background-color: $color-white;
+        color: $color-green;
+      }
     }
   }
 
