@@ -30,11 +30,21 @@ imageBoxImage.forEach((img) => {
     popUp.classList.add("animation-appear");
     popUpImage.src = e.target.src;
   });
+
+  popUp.addEventListener("click", () => {
+    scrollToTopIcon.classList.add("display-block");
+    hamburgerMenuButton.classList.remove("display-none");
+    popUp.classList.remove("animation-appear");
+    popUp.classList.add("animation-disappear");
+    setTimeout(() => {
+      popUp.classList.add("popup--hidden");
+    }, 500);
+  })
 });
 
 popUpClose.addEventListener('click', () => {
-  scrollToTopIcon.classList.add("display-block");
-  hamburgerMenuButton.classList.remove("display-none");
+  // scrollToTopIcon.classList.add("display-block");
+  
   popUp.classList.add("animation-disappear");
   setTimeout(() => {
     popUp.classList.add("popup--hidden");
