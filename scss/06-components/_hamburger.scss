@@ -1,0 +1,30 @@
+@use '../01-settings/' as *;
+@use '../02-tools/' as *;
+
+.hamburger {
+  height: 30px;
+  width: 30px;
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  
+
+  @include medium {
+    display: none;
+  }
+
+  
+  font-size: 2.5rem;
+  z-index: 2;
+  cursor: pointer;
+
+  &__bar {
+    background-color: $color-white;
+    display: block;
+    height: 5px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: 0.4s;
+  }
+}

@@ -1,10 +1,16 @@
 'use strict';
 
 const siteMenu = document.querySelector(".site-menu");
-const hamburgerMenuButton = document.querySelector(".fa-solid");
+const hamburgerMenuButton = document.querySelector(".hamburger");
+const hamburgerBar1 = document.querySelector(".hamburger--1")
+const hamburgerBar2 = document.querySelector(".hamburger--2")
+const hamburgerBar3 = document.querySelector(".hamburger--3")
 
 const menuSettings = () => {
   hamburgerMenuButton.addEventListener("click", () => {
+    hamburgerBar1.classList.toggle("rotate-bar-1");
+    hamburgerBar2.classList.toggle("rotate-bar-3");
+    hamburgerBar3.classList.toggle("rotate-bar-2");
     siteMenu.classList.toggle("active");
   });
 

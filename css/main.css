@@ -318,16 +318,6 @@ p {
   cursor: pointer;
 }
 
-.fa-bars {
-  left: 20px;
-  top: 20px;
-}
-@media screen and (min-width: 768px) {
-  .fa-bars {
-    display: none;
-  }
-}
-
 .fa-chevron-up {
   display: none;
   position: fixed;
@@ -388,6 +378,31 @@ p {
   background-color: #eff0f3;
   color: #132601;
   border: none;
+}
+
+.hamburger {
+  height: 30px;
+  width: 30px;
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 2.5rem;
+  z-index: 2;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+.hamburger__bar {
+  background-color: #eff0f3;
+  display: block;
+  height: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  transition: 0.4s;
 }
 
 .site-header {
@@ -497,6 +512,18 @@ p {
 
 .active {
   transform: translateX(100%);
+}
+
+.rotate-bar-1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.rotate-bar-2 {
+  opacity: 0;
+}
+
+.rotate-bar-3 {
+  transform: rotate(45deg) translate(-1px, -2px);
 }
 
 /*# sourceMappingURL=main.css.map */

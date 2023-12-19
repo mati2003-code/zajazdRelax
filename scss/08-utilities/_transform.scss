@@ -1,3 +1,12 @@
 .active {
   transform: translateX(100%);
 }
+.rotate-bar-1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.rotate-bar-2 {
+  opacity: 0;
+}
+.rotate-bar-3 {
+  transform: rotate(45deg) translate(-1px, -2px);
+}
