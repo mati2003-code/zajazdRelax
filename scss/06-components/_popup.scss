@@ -1,5 +1,6 @@
 @use '../01-settings/' as *;
 @use '../02-tools/' as *;
+@use 'sass:color' as *;
 
 .popup {
   display: flex;
@@ -31,27 +32,42 @@
     display: none;
   }
 
-  &__close {
-    position: fixed;
-    right: 32px;
-    top: 32px;
-    font-size: 20px;
-    padding: 5px 10px;
-    background-color: transparent;
-    color: $color-white;
-    border: 1px solid $color-white;
-    transition: 0.5s linear;
+  &__arrow {
+    
+    font-size: 30px;
+    padding: 8px 15px;
+    background-color: $color-white;
+    color: $color-green;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.8;
+    transition: 0.3s linear;
     cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
 
     @include medium {
       font-size: 40px;
       padding: 10px 20px;
     }
 
-    &:hover {
-      background-color: $color-white;
-      color: $color-green;
-      border: none;
+    &--close {
+      position: fixed;
+    right: 32px;
+    top: 32px;
+    }
+    &--right {
+      position: absolute;
+      top: 50%;
+      right: 1%;
+    }
+    &--left {
+      position: absolute;
+      top: 50%;
+      left: 1%;
     }
   }
+
 }

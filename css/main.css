@@ -356,28 +356,40 @@ p {
 .popup--hidden {
   display: none;
 }
-.popup__close {
-  position: fixed;
-  right: 32px;
-  top: 32px;
-  font-size: 20px;
-  padding: 5px 10px;
-  background-color: transparent;
-  color: #eff0f3;
-  border: 1px solid #eff0f3;
-  transition: 0.5s linear;
+.popup__arrow {
+  font-size: 30px;
+  padding: 8px 15px;
+  background-color: #eff0f3;
+  color: #132601;
+  border: none;
+  border-radius: 4px;
+  opacity: 0.8;
+  transition: 0.3s linear;
   cursor: pointer;
 }
+.popup__arrow:hover {
+  opacity: 1;
+}
 @media screen and (min-width: 768px) {
-  .popup__close {
+  .popup__arrow {
     font-size: 40px;
     padding: 10px 20px;
   }
 }
-.popup__close:hover {
-  background-color: #eff0f3;
-  color: #132601;
-  border: none;
+.popup__arrow--close {
+  position: fixed;
+  right: 32px;
+  top: 32px;
+}
+.popup__arrow--right {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+}
+.popup__arrow--left {
+  position: absolute;
+  top: 50%;
+  left: 1%;
 }
 
 .hamburger {
@@ -524,6 +536,14 @@ p {
 
 .rotate-bar-3 {
   transform: rotate(45deg) translate(-1px, -2px);
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.visibility-visible {
+  visibility: visible;
 }
 
 /*# sourceMappingURL=main.css.map */

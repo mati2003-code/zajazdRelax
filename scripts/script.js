@@ -2,9 +2,31 @@
 
 const siteMenu = document.querySelector(".site-menu");
 const hamburgerMenuButton = document.querySelector(".hamburger");
-const hamburgerBar1 = document.querySelector(".hamburger--1")
-const hamburgerBar2 = document.querySelector(".hamburger--2")
-const hamburgerBar3 = document.querySelector(".hamburger--3")
+const hamburgerBar1 = document.querySelector(".hamburger--1");
+const hamburgerBar2 = document.querySelector(".hamburger--2");
+const hamburgerBar3 = document.querySelector(".hamburger--3");
+
+let currentImgIndex;
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const sections = document.querySelectorAll('.site-section');
+
+  const scrollToSection = (id) => {
+    const targetSection = document.querySelector(`#${id}`);
+    window.scrollTo({
+      top: targetSection.offsetTop, 
+      behavior: "smooth"
+    });
+  }
+
+  sections.forEach((section) => {
+    section.addEventListener('click', (event) => {
+      const sectionId = event.currentTarget.getAttribute('id');
+      scrollToSection(sectionId);
+    })
+  });
+});
 
 const menuSettings = () => {
   hamburgerMenuButton.addEventListener("click", () => {
@@ -24,10 +46,12 @@ document.addEventListener("DOMContentLoaded", menuSettings);
 
 const imageBoxImage = document.querySelectorAll(".image-box__image");
 const popUp = document.querySelector(".popup");
-const popUpClose = document.querySelector(".popup__close");
-const popUpImage = document.querySelector(".popup__image")
+const popUpClose = document.querySelector(".popup__arrow--close");
+const popUpImage = document.querySelector(".popup__image");
+const arrowRight = document.querySelector('.popup__arrow--right');
+const arrowLeft = document.querySelector('.popup__arrow--left');
 
-imageBoxImage.forEach((img) => {
+imageBoxImage.forEach((img, index) => {
   img.addEventListener('click' , (e) => {
     scrollToTopIcon.classList.add("animation-disappear");
     setTimeout(() => {
@@ -38,23 +62,39 @@ imageBoxImage.forEach((img) => {
     popUp.classList.remove("popup--hidden");
     popUp.classList.add("animation-appear");
     popUpImage.src = e.target.src;
+    currentImgIndex = index;
   });
-  popUp.addEventListener("click", () => {
-    scrollToTopIcon.classList.remove("animation-disappear");
-    scrollToTopIcon.classList.add("animation-appear");
-    setTimeout(() => {
-      scrollToTopIcon.classList.add("display-block");
-    }, 500); 
-    hamburgerMenuButton.classList.remove("display-none");
-    popUp.classList.remove("animation-appear");
-    popUp.classList.add("animation-disappear");
-    setTimeout(() => {
-      popUp.classList.add("popup--hidden");
+
+  popUp.addEventListener("click", (e) => {
+    if(e.target === arrowRight || e.target === arrowLeft) {  
+      return;
+    } else {
+      scrollToTopIcon.classList.remove("animation-disappear");
+      scrollToTopIcon.classList.add("animation-appear");
+      setTimeout(() => {
+        scrollToTopIcon.classList.add("display-block");
+      }, 500); 
+      hamburgerMenuButton.classList.remove("display-none");
+      popUp.classList.remove("animation-appear");
+      popUp.classList.add("animation-disappear");
+      setTimeout(() => {
+        popUp.classList.add("popup--hidden");
     }, 500);
+    }
   });
 });
 
-popUpClose.addEventListener('click', () => {  
+arrowRight.addEventListener('click', () => {
+  currentImgIndex === imageBoxImage.length - 1 ? currentImgIndex = 0 : currentImgIndex++;
+  popUpImage.src = imageBoxImage[currentImgIndex].src;
+});
+
+arrowLeft.addEventListener('click', () => {
+  currentImgIndex === 0 ? currentImgIndex = imageBoxImage.length - 1 : currentImgIndex--;
+  popUpImage.src = imageBoxImage[currentImgIndex].src;
+});
+
+popUpClose.addEventListener('click', (e) => { 
   popUp.classList.remove("animation-disappear");
   popUp.classList.add("animation-appear");
   setTimeout(() => {
@@ -85,7 +125,8 @@ window.addEventListener("scroll", () => {
         scrollToTopIcon.classList.remove("display-block");
       }, 500);
     }
-})
+});
+
 
 
 
