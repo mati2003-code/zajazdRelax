@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   logo.classList.add('scale-logo');
   setTimeout(() => {
     logo.classList.remove('rotate-logo');
-  }, 500);
+  }, 300);
 
   const sections = document.querySelectorAll('.site-section');
 

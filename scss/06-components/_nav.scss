@@ -34,8 +34,11 @@
     border-radius: .4rem;
     transition-duration: .5s;
 
-    &:hover {
-      color: orange;
+    @include large {
+
+      &:hover {
+        color: orange;
+      }
     }
   }
 }
