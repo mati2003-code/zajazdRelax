@@ -28,16 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const switchHamburgertoCross = () => {
+  hamburgerBar1.classList.toggle("rotate-bar-1");
+  hamburgerBar2.classList.toggle("rotate-bar-3");
+  hamburgerBar3.classList.toggle("rotate-bar-2");
+}
+
 const menuSettings = () => {
   hamburgerMenuButton.addEventListener("click", () => {
-    hamburgerBar1.classList.toggle("rotate-bar-1");
-    hamburgerBar2.classList.toggle("rotate-bar-3");
-    hamburgerBar3.classList.toggle("rotate-bar-2");
+    switchHamburgertoCross();
     siteMenu.classList.toggle("active");
   });
 
   siteMenu.addEventListener("click", () => {
-
+    switchHamburgertoCross();
     siteMenu.classList.remove("active");
   });
 }
@@ -117,13 +121,13 @@ window.addEventListener("scroll", () => {
     scrollToTopIcon.classList.add("animation-appear");
     setTimeout(() => {
       scrollToTopIcon.classList.add("display-block");
-    }, 500);
+    }, 300);
   }  else {
       scrollToTopIcon.classList.remove("animation-appear");
       scrollToTopIcon.classList.add("animation-disappear");
       setTimeout(() => {
         scrollToTopIcon.classList.remove("display-block");
-      }, 500);
+      }, 300);
     }
 });
 
