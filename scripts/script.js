@@ -13,10 +13,20 @@ let currentImgIndex;
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  window.scrollTo(0, 0);
+
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+  }
+
   logo.classList.remove('scale-logo');
   setTimeout(() => {
     logo.classList.add('scale-logo');
   }, 300);
+
+  logo.addEventListener('click', () => {
+    location.reload();
+  });
 
   const sections = document.querySelectorAll('.site-section');
 

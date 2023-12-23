@@ -439,6 +439,7 @@ p {
   font-size: 3.5rem;
   letter-spacing: 6px;
   z-index: 1;
+  cursor: pointer;
   transform: scale(0) translateZ(0);
   transition: transform 1s ease;
 }
