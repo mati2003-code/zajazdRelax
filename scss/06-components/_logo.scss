@@ -11,7 +11,7 @@
   font-size: 3.5rem;
   letter-spacing: 6px;
   z-index: 1;
-  transform: scale(0, 0, 1);
+  transform: scale(0) translateZ(0);
   transition: transform 1s ease;
 
   &::first-letter {
