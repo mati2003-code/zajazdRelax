@@ -427,6 +427,28 @@ p {
   transition: 0.4s;
 }
 
+.logo {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 5px 5px;
+  color: white;
+  border-bottom: 1px solid #eff0f3;
+  font-size: 3.5rem;
+  letter-spacing: 6px;
+  z-index: 1;
+  transform: scale(0);
+  transition: 1s;
+}
+.logo::first-letter {
+  color: orange;
+}
+@media screen and (min-width: 930px) {
+  .logo {
+    display: none;
+  }
+}
+
 .site-header {
   background: url(../assets/img/bg-header.webp) center/cover;
   height: 100vh;
@@ -548,6 +570,10 @@ p {
 
 .rotate-bar-3 {
   transform: rotate(45deg) translate(-1px, -2px);
+}
+
+.scale-logo {
+  transform: scale(1);
 }
 
 .visibility-hidden {

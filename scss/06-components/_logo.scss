@@ -1,0 +1,25 @@
+@use '../01-settings/' as *;
+@use '../02-tools/' as *;
+
+.logo {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 5px 5px;
+  color: white;
+  border-bottom: 1px solid $color-white;
+  font-size: 3.5rem;
+  letter-spacing: 6px;
+  z-index: 1;
+  transform: scale(0);
+  transition: 1s;
+
+  &::first-letter {
+    color: orange;
+  }
+  
+
+  @include medium {
+    display: none;
+  }
+}
