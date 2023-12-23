@@ -7,8 +7,6 @@ const hamburgerBar2 = document.querySelector(".hamburger--2");
 const hamburgerBar3 = document.querySelector(".hamburger--3");
 const logo = document.querySelector('.logo');
 
-
-
 let currentImgIndex;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   logo.addEventListener('click', () => {
     location.reload();
   });
-
   const sections = document.querySelectorAll('.site-section');
 
   const scrollToSection = (id) => {
