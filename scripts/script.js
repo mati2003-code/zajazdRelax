@@ -13,9 +13,9 @@ let currentImgIndex;
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  logo.classList.add('scale-logo');
+  logo.classList.remove('scale-logo');
   setTimeout(() => {
-    logo.classList.remove('rotate-logo');
+    logo.classList.add('scale-logo');
   }, 300);
 
   const sections = document.querySelectorAll('.site-section');
