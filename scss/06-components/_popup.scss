@@ -25,12 +25,11 @@
 
     @include small {
       width: 80%;
-      height: 400px;
+      height: 500px;
     }
 
     @include medium{
       width: 700px;
-      height: 500px;
     }
   }
 

@@ -1,11 +1,30 @@
 @use '../01-settings/' as *;
+@use '../02-tools/' as *;
 
 .site-section {
   min-height: 70vh;
   padding-top: $grid-base * 3;
+  position: relative;
+
+  &__blackout {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
 
   &--bg-color {
     background: $color-bg-section;
     min-height: 40vh;
   } 
+
+  &--bg-location {
+    background: url(../../assets/img/bg-location.webp) center/cover;
+    z-index: -2;
+
+    @include large {
+      background-attachment: fixed;
+    }
+  }
 }

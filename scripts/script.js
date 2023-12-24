@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   logo.addEventListener('click', () => {
     location.reload();
   });
+  
   const sections = document.querySelectorAll('.site-section');
 
   const scrollToSection = (id) => {
@@ -85,7 +86,9 @@ imageBoxImage.forEach((img, index) => {
   });
 
   popUp.addEventListener("click", (e) => {
-    if(e.target === arrowRight || e.target === arrowLeft) {  
+    if(e.target === arrowRight 
+      || e.target === arrowLeft 
+      || e.target === popUpImage) {  
       return;
     } else {
       scrollToTopIcon.classList.remove("animation-disappear");
