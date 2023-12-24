@@ -27,6 +27,13 @@
     }
   }
 
+  &--md100 {
+    @include medium {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
   &--md50 {
     @include medium {
       flex: 0 0 50%;
@@ -45,6 +52,13 @@
     @include medium {
       flex: 0 0 25%;
       max-width: 25%;
+    }
+  }
+
+  &--lg100 {
+    @include large {
+      flex: 0 0 100%;
+      max-width: 100%;
     }
   }
 
