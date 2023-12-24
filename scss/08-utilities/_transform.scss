@@ -1,5 +1,6 @@
 .active {
-  transform: translateX(100%);
+  transform: scale(1) translate(50%, 47%);
+  opacity: 1;
 }
 .rotate-bar-1 {
   transform: rotate(-45deg) translate(-5px, 6px);
@@ -11,5 +12,6 @@
   transform: rotate(45deg) translate(-1px, -2px);
 }
 .scale-logo {
-  transform: scale(1) translateZ(0);
+  transform: scale(1);
 }
+
