@@ -23,6 +23,11 @@
     padding: 10px;
     border-radius: 16px;
 
+    @include small {
+      width: 80%;
+      height: 65%;
+    }
+
     @include medium{
       width: 700px;
       height: 500px;
@@ -61,12 +66,12 @@
     }
     &--right {
       position: absolute;
-      top: 50%;
+      top: 47%;
       right: 1%;
     }
     &--left {
       position: absolute;
-      top: 50%;
+      top: 47%;
       left: 1%;
     }
   }

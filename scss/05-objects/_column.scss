@@ -4,6 +4,28 @@
 .column  {
   width: 100%;
   padding: 0 $gutter $gutter $gutter;
+  margin: auto;
+
+  &--sm80 {
+    @include small {
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+  }
+
+  &--sm33 {
+    @include small {
+      flex: 0 0 33.3333333%;
+      max-width: 33.3333333%;
+    }
+  }
+
+  &--sm25 {
+    @include small {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
 
   &--md50 {
     @include medium {
