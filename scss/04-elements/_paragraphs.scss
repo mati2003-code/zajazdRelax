@@ -6,5 +6,8 @@ p {
   font-size: 2 * $font-base;
   line-height: 2.8rem;
   padding: $grid-base;
-  margin-top: $grid-base * 1.5;
+
+  &---margin-top {
+    margin-top: $grid-base * 1.5;
+  }
 }

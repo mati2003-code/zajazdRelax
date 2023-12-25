@@ -1,0 +1,5 @@
+@use '../01-settings/' as *;
+
+.box-shadow {
+  box-shadow: 0px 0px 5px 0px $color-white;
+}

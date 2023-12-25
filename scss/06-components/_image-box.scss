@@ -25,12 +25,25 @@
     border-top-left-radius: .6rem;
     border-top-right-radius: .6rem;
 
+
     @include small {
       height: 30rem;
     }
 
     @include medium {
       height: 16rem;
+    }
+
+    &--gallery {
+      margin-top: 20px;
+
+      @include small {
+        height: 40rem;
+      }
+  
+      @include medium {
+        height: 50rem;
+      }
     }
   }
   

@@ -1,6 +1,7 @@
 @use '../01-settings/' as *;
 
 .site-footer {
-  background: $color-bg-footer;
+  position: relative;
+  background: rgb(29, 0, 0);
   color: $color-white;
 }

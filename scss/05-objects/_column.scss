@@ -13,6 +13,13 @@
     }
   }
 
+  &--sm50 {
+    @include small {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
   &--sm33 {
     @include small {
       flex: 0 0 33.3333333%;

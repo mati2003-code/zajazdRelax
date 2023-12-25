@@ -19,7 +19,26 @@
   &--h2 {
     font-size: 5rem;
     font-style: italic;
+    letter-spacing: 1px;
     width: 100%;
     text-align: center;
+  }
+
+  &--h3 {
+    color: $color-orange;
+    padding: 10px;
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+
+    &::before, &::after {
+      content: '';
+      display: inline-block;
+      background: radial-gradient(circle, rgba(253,170,29,1) 0%, rgb(29, 0, 0) 100%);
+      height: 2px;
+      width: 100%;
+      margin: 5px;
+      
+    }
   }
 }
