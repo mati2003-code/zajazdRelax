@@ -25,6 +25,10 @@
     border-top-left-radius: .6rem;
     border-top-right-radius: .6rem;
 
+    @include small {
+      height: 30rem;
+    }
+
     @include medium {
       height: 16rem;
     }

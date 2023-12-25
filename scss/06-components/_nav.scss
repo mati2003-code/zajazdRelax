@@ -19,7 +19,7 @@
       display: block;
       width: 8px;
       height: 8px;
-      background-color: orange;
+      background-color: $color-orange;
       position: absolute;
       top: 37%;
       left: -15%;
@@ -37,7 +37,7 @@
     @include large {
 
       &:hover {
-        color: orange;
+        color: $color-orange;
       }
     }
   }
