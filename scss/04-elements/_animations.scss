@@ -19,3 +19,19 @@
   }
 }
 
+@keyframes underlines {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursorAnimate {
+  50% {border-color: transparent;}
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+

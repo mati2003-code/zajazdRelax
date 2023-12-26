@@ -5,6 +5,9 @@
   min-height: 70vh;
   padding-top: $grid-base * 3;
   position: relative;
+  min-height: 40vh;
+  // border-bottom: 1px solid $color-orange;
+  box-shadow: 0px 0px 5px 0px $color-orange;
 
   &__blackout {
     position: absolute;
@@ -13,11 +16,6 @@
     width: 100%;
     z-index: -2;
   }
-
-  &--bg-color {
-    background: $color-bg-section;
-    min-height: 40vh;
-  } 
 
   &--bg-location {
     background: url(../assets/img/bg-location.webp) center/cover;

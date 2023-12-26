@@ -1,9 +1,7 @@
 @use '../01-settings/' as *;
 @use '../02-tools/' as *;
 
-
 .nav {
-  // background-color: rgba(0, 0, 0, .2);
 
   &__item {
     font-size: 2rem;
@@ -14,6 +12,7 @@
     @include medium {
       display: inline-block;
     }
+
     &::before {
       content: '';
       display: block;
@@ -24,6 +23,22 @@
       top: 37%;
       left: -15%;
       transform: rotate(45deg);
+    }
+    
+    &:hover {
+      color: $color-orange;
+      
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+        background-color: $color-orange;
+        animation: underlines .2s linear forwards; 
+      }
     }
   }
 
@@ -38,6 +53,7 @@
 
       &:hover {
         color: $color-orange;
+        
       }
     }
   }

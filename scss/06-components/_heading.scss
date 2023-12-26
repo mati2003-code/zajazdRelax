@@ -31,12 +31,12 @@
       overflow: hidden;
       white-space: nowrap;
       animation: 
-      cursorAnimate 1s ease-in-out 4s infinite ,
-      typing 4s steps(28, end);
+      cursorAnimate 1s ease-in-out 3s infinite ,
+      typing 3s steps(28, end);
     }
     @include large {
       font-size: 10rem;
-      width: 52rem;
+      width: 53rem;
     }
   }
   

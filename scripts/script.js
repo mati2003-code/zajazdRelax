@@ -73,10 +73,14 @@ const arrowLeft = document.querySelector('.popup__arrow--left');
 
 imageBoxImage.forEach((img, index) => {
   img.addEventListener('click' , (e) => {
+    debugger;
+    scrollToTopIcon.classList.remove("animation-appear");
     scrollToTopIcon.classList.add("animation-disappear");
-    setTimeout(() => {
+
+    scrollToTopIcon.addEventListener('transitionend', () => {
       scrollToTopIcon.classList.remove("display-block");
-    }, 500);
+    }, { once: true }); 
+
     hamburgerMenuButton.classList.add("display-none");
     popUp.classList.remove("animation-disappear");
     popUp.classList.remove("popup--hidden");
@@ -85,23 +89,24 @@ imageBoxImage.forEach((img, index) => {
     currentImgIndex = index;
   });
 
-  popUp.addEventListener("click", (e) => {
-    if(e.target === arrowRight 
-      || e.target === arrowLeft 
-      || e.target === popUpImage) {  
-      return;
-    } else {
-      scrollToTopIcon.classList.remove("animation-disappear");
-      scrollToTopIcon.classList.add("animation-appear");
-      setTimeout(() => {
-        scrollToTopIcon.classList.add("display-block");
-      }, 500); 
-      hamburgerMenuButton.classList.remove("display-none");
-      popUp.classList.remove("animation-appear");
-      popUp.classList.add("animation-disappear");
-      setTimeout(() => {
-        popUp.classList.add("popup--hidden");
-    }, 500);
+  popUp.addEventListener('click', (e) => {
+    switch(e.target) {
+      case arrowRight:
+      case arrowLeft:
+      case popUpImage:
+        return;
+      default:   
+        scrollToTopIcon.classList.remove("animation-disappear");
+        scrollToTopIcon.classList.add("animation-appear");
+        setTimeout(() => {
+          scrollToTopIcon.classList.add("display-block");
+        }, 300); 
+        hamburgerMenuButton.classList.remove("display-none");
+        popUp.classList.remove("animation-appear");
+        popUp.classList.add("animation-disappear");
+        setTimeout(() => {
+          popUp.classList.add("popup--hidden");
+        }, 300);
     }
   });
 });
