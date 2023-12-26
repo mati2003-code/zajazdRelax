@@ -1,18 +1,42 @@
 @use '../01-settings/' as *;
 @use '../02-tools/' as *;
 
+@keyframes cursorAnimate {
+  50% {border-color: transparent;}
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
 .heading {
 
   &--h1 {
     color: $color-white;
-    font-size: 6rem;
-    font-style: italic;
-
+    font-size: 5rem;
+    width: 27rem;
+    margin: 0 auto;
+    
+    @include small {
+      font-size: 6rem;
+      width: 34rem;
+    }
     @include medium {
+      width: 43rem;
       font-size: 8rem;
+      border-right: 4px solid white;
+      padding-right: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: 
+      cursorAnimate 1s ease-in-out 4s infinite ,
+      typing 4s steps(28, end);
     }
     @include large {
       font-size: 10rem;
+      width: 52rem;
     }
   }
   
