@@ -2,6 +2,7 @@ const mainDishes = document.querySelector('#mainDishes');
 const polishCousine = document.querySelector('#polishCousine');
 const forKids = document.querySelector('#forKids');
 const salads = document.querySelector('#salads');
+const picturesContainer = document.querySelector('#pictures');
 
 const mainMenu = [
   {
@@ -80,6 +81,21 @@ const saladsMenu = [
   }
 ]
 
+const images = [
+  {
+    img: "./assets/img/restaurant-1.webp"
+  },
+  {
+    img: "./assets/img/restaurant-2.webp"
+  },
+  {
+    img: "./assets/img/restaurant-3.webp"
+  },
+  {
+    img: "./assets/img/restaurant-4.jpg"
+  }
+]
+
 const createMenuPositions = (item) => {
   const menuColumn = document.createElement('div');
   menuColumn.classList.add('column--menu', 'margin-bottom');
@@ -122,4 +138,28 @@ const createMenuPositions = (item) => {
     const menuItemElement = createMenuPositions(item);
     salads.appendChild(menuItemElement);
   });
+
+  images.forEach((image) => {
+    const mainContainer = document.createElement('div');
+    mainContainer.classList.add('column', 'column--sm80', 'column--md50', 'column--lg25')
+
+    const imageContainer = document.createElement('div');
+    imageContainer.classList.add('image-box');
+
+    const imgElement = document.createElement('img');
+    imgElement.classList.add('image-box__image')
+    imgElement.src = image.img;
+    imgElement.alt = 'jedzenie';
+
+    picturesContainer.appendChild(mainContainer);
+    mainContainer.appendChild(imageContainer);
+    imageContainer.appendChild(imgElement);
+
+  });
+
+
+
+
+
+
 
