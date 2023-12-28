@@ -8,7 +8,6 @@
     font-size: 5rem;
     width: 27rem;
     margin: 0 auto;
-    border-right: 4px solid white;
     
     @include small {
       font-size: 6rem;
@@ -17,7 +16,7 @@
     @include medium {
       width: 43rem;
       font-size: 8rem;
-      
+      border-right: 4px solid white;
       padding-right: 20px;
       padding-bottom: 10px;
       overflow: hidden;
