@@ -22,8 +22,7 @@
     height: 22rem;
     width: 100%;
     display: block;
-    border-top-left-radius: .6rem;
-    border-top-right-radius: .6rem;
+    border-radius: .6rem;
 
 
     @include small {
@@ -46,16 +45,10 @@
       }
     }
   }
-  
-  &__text {
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    font-style: italic;
 
-    &--text-description {
-      font-size: 2.2rem;
-      font-style: italic;
-    }
+  &--small {
+    width: 12rem;
+    height: 10rem;
+    border-radius: .4rem;
   }
 }

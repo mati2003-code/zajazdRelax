@@ -6,6 +6,13 @@
   padding: 0 $gutter $gutter $gutter;
   margin: 0 auto;
 
+  &--flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
   &--sm80 {
     @include small {
       flex: 0 0 80%;

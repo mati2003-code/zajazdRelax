@@ -1,16 +1,6 @@
 @use '../01-settings/' as *;
 @use '../02-tools/' as *;
 
-@keyframes cursorAnimate {
-  50% {border-color: transparent;}
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
 .heading {
 
   &--h1 {
@@ -18,6 +8,7 @@
     font-size: 5rem;
     width: 27rem;
     margin: 0 auto;
+    border-right: 4px solid white;
     
     @include small {
       font-size: 6rem;
@@ -26,13 +17,14 @@
     @include medium {
       width: 43rem;
       font-size: 8rem;
-      border-right: 4px solid white;
+      
       padding-right: 20px;
+      padding-bottom: 10px;
       overflow: hidden;
       white-space: nowrap;
       animation: 
-      cursorAnimate 1s ease-in-out 3s infinite ,
-      typing 3s steps(28, end);
+      cursorAnimate 1s ease-in-out 2s infinite,
+      typing 2s steps(28, end);
     }
     @include large {
       font-size: 10rem;
@@ -42,7 +34,6 @@
   
   &--h2 {
     font-size: 5rem;
-    font-style: italic;
     letter-spacing: 1px;
     width: 100%;
     text-align: center;
@@ -52,9 +43,12 @@
     color: $color-orange;
     padding: 10px;
     font-size: 2rem;
-    font-style: italic;
     text-align: center;
 
+    
+  }
+
+  &--footer {
     &::before, &::after {
       content: '';
       display: inline-block;
@@ -62,7 +56,16 @@
       height: 2px;
       width: 100%;
       margin: 5px;
-      
+    }
+  }
+  &--menu {
+    &::before, &::after {
+      content: '';
+      display: inline-block;
+      background: radial-gradient(circle, rgba(253,170,29,1) 0%, rgba(255,255,255,1) 100%, rgba(252,176,69,1) 100%);
+      height: 2px;
+      width: 100%;
+      margin: 5px;
     }
   }
 }
