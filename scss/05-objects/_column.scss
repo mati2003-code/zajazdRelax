@@ -16,6 +16,9 @@
 
     @include small {
       flex-direction: row;
+      border: none;
+      box-shadow: 0px 0px 1px 0px $color-orange;
+      padding: 20px;
     }
 
 
