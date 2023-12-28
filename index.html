@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Zajazd RelaX Ciężkowice | Restauracja | Noclegi | Wesela | Klub">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b9277949ac.js" crossorigin="anonymous"></script>
+    <script src="scripts/menu.js" defer></script>
     <script src="scripts/script.js" defer></script>
     <link rel="stylesheet" href="css/main.css">
     <title>Relax - restauracja, noclegi, wesela, klub</title>
@@ -100,10 +102,8 @@
                     <a class="column column--sm80 column--md33 site-section--contact-button" href="tel: 14 651 02 80">Zadzwoń do nas</a>
                     <span class="site-section--span column column--sm80 column--md33">lub</span>
                     <a class="column column--sm80 column--md33 site-section--contact-button" href="mailto:  zajazdrelax@zajazdrelax.pl">Wyślij e-mail</a>
-                    
                 </div>
             </div>
-            
         </section>
         <section class="site-section site-section--bg-color" id="restaurant">
             <h2 class="heading--h2">Restauracja</h2>
@@ -148,93 +148,19 @@
                 <div class="row">
                    <div class="column column--sm80 column--lg50">
                     <h3 class="heading--h3 heading--menu">Dania główne</h3>
-                    <ul class="list">
-                        <div class="column--menu margin-bottom">
-                            <li class="list__el">Pierś z kurczaka w panierce panko podana z frytkami, zestawem surówek  i remuladą</li>        
-                            <img class="image-box image-box__image image-box--small" src="./assets/img/menu-2.webp" alt="menu2">    
-                            <span class="text-color-green text-font-large">25zł</span>    
-                        </div>
-                        <div class="column--menu margin-bottom">
-                            <li class="list__el">Panierowana pierś z kurczaka z pieczarkami i serem zółtym podana z ziemniakami i zestawem surówek</li>
-                            <img class="image-box image-box__image image-box--small" src="./assets/img/menu-3.webp" alt="menu2">
-                            <span class="text-color-green text-font-large">27zł</span>
-                        </div>
-                        <div class="column--menu margin-bottom">
-                            <li class="list__el">Kotlet De Volaille podany z frytkami i zestawem surówek</li>
-                            <img class="image-box image-box__image image-box--small" src="./assets/img/menu-4.webp" alt="menu2">
-                            <span class="text-color-green text-font-large">32zł</span>
-                        </div>
-                        <div class="column--menu margin-bottom">
-                            <li class="list__el">Placek po węgiersku z  zestawem surówek</li>
-                            <img class="image-box image-box__image image-box--small" src="./assets/img/menu-5.webp" alt="menu2">
-                            <span class="text-color-green text-font-large">29zł</span>
-                        </div>
-                        <div class="column--menu margin-bottom border-bottom-none">
-                            <li class="list__el">Kotlet schabowy panierowany po polsku z ziemniakami i kapustą zasmażaną</li>
-                            <img class="image-box image-box__image image-box--small" src="./assets/img/menu-6.webp" alt="menu2">
-                            <span class="text-color-green text-font-large">35zł</span>
-                        </div>
-                    </ul>
+                    <ul class="list" id="mainDishes"></ul>
                    </div> 
                    <div class="column column--sm80 column--lg50">
                     <h3 class="heading--h3 heading--menu">Pierogi</h3>
-                    <ul class="list">
-                        <div class="column--menu margin-bottom">
-                            <li class="list__el">Pierogi ruskie</li>
-                            <img class="image-box image-box__image image-box--small" src="./assets/img/menu-5.webp" alt="menu2">
-                            <span class="text-color-green text-font-large">18zł</span>
-                        </div>
-                        <div class="column--menu margin-bottom">
-                            <li class="list__el">Pierogi z kapustą</li>
-                            <img class="image-box image-box__image image-box--small" src="./assets/img/menu-4.webp" alt="menu2">
-                            <span class="text-color-green text-font-large">18zł</span>
-                        </div>
-                        <div class="column--menu margin-bottom">
-                            <li class="list__el">Pierogi z mięsem</li>
-                            <img class="image-box image-box__image image-box--small" src="./assets/img/menu-6.webp" alt="menu2">
-                            <span class="text-color-green text-font-large">22zł</span>
-                        </div>
-                        <div class="column--menu margin-bottom">
-                            <li class="list__el">Pierogi z serem na słodko</li>
-                            <img class="image-box image-box__image image-box--small" src="./assets/img/menu-3.webp" alt="menu2">
-                            <span class="text-color-green text-font-large">17zł</span>
-                        </div>
-                        <div class="column--menu margin-bottom border-bottom-none">
-                            <li class="list__el">Pierogi z serem na słodko</li>
-                            <img class="image-box image-box__image image-box--small" src="./assets/img/menu-6.webp" alt="menu2">
-                            <span class="text-color-green text-font-large">17zł</span>
-                        </div>
-                    </ul>
+                    <ul class="list" id="polishCousine"></ul>
                    </div> 
                     <div class="column column--sm80 column--lg50">
                         <h3 class="heading--h3 heading--menu">Menu dla dzieci</h3>
-                        <ul class="list">
-                            <div class="column--menu margin-bottom">
-                                <li class="list__el">Pyszne kotleciki z kurczaka z frytkami i surówką</li>
-                                <img class="image-box image-box__image image-box--small" src="./assets/img/menu-7.webp" alt="menu2">
-                                <span class="text-color-green text-font-large">21zł</span>
-                            </div>
-                            <div class="column--menu margin-bottom border-bottom-none">
-                                <li class="list__el">Pyszne kotleciki z kurczaka z frytkami i surówką</li>
-                                <img class="image-box image-box__image image-box--small" src="./assets/img/menu-5.webp" alt="menu2">
-                                <span class="text-color-green text-font-large">21zł</span>
-                            </div>
-                        </ul>
+                        <ul class="list" id="forKids"></ul>
                     </div> 
                     <div class="column column--sm80 column--lg50">
                         <h3 class="heading--h3 heading--menu">Sałatki</h3>
-                        <ul class="list">
-                            <div class="column--menu margin-bottom">
-                                <li class="list__el">Grecka inspiracja (sałata, ogórek, pomidor, ser typu feta, oliwki, sos winegret)</li>
-                                <img class="image-box image-box__image image-box--small" src="./assets/img/menu-3.webp" alt="menu2">
-                                <span class="text-color-green text-font-large">26zł</span>
-                            </div>
-                            <div class="column--menu margin-bottom border-bottom-none">
-                                <li class="list__el">Sałatka z chrupiącym kurczakiem i sosem miodowo-majonezowym (sałata, korniszon, pomidorek koktajlowy, parmezan, kruszonka z boczku)</li>
-                                <img class="image-box image-box__image image-box--small" src="./assets/img/menu-6.webp" alt="menu2">
-                                <span class="text-color-green text-font-large">28zł</span>
-                            </div>
-                        </ul>
+                        <ul class="list" id="salads"></ul>
                     </div> 
                 </div>
             </div>
